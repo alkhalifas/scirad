@@ -1,0 +1,13 @@
+The exploration of CRISPR technology across various scientific articles highlights its transformative impact on genomics and biotechnology. In the context of porcine embryos, CRISPR/Cas9 has been pivotal in advancing genetic modification techniques, such as somatic cell nuclear transfer and sperm-mediated gene transfer, despite challenges like off-target effects and mosaicism. This underscores the need for method refinement to enhance agricultural and biomedical applications.
+
+In rice genomics, CRISPR/Cas-mediated prime editing has been optimized for in situ epitope tagging, significantly improving gene tagging efficiency via the NM-PE strategy. This method facilitates the tagging of endogenous rice genes, enhancing studies on gene function and genetic improvement.
+
+Synthetic biology benefits from CRISPR through the development of molecular proximity sensors using dual-component guide RNAs, enabling programmable molecular circuits within living cells. This innovation bridges the gap between electronic and natural circuits, offering new avenues for genome editing.
+
+CRISPR-based cytosine base editors (CBEs) have been expanded through the discovery of novel cytidine deaminases from the animal kingdom, enhancing site-specific C-to-T conversions in rice. This advancement broadens the scope of CBEs, allowing for robust multiplexed base editing with minimal off-target effects.
+
+The EXPERT system extends prime editing capabilities, allowing for large fragment edits with enhanced efficiency and safety. This development holds significant potential for life sciences, enabling more comprehensive genomic modifications.
+
+In biotechnology, CRISPR/Cas9 editing of the Pgs gene in Fusarium circinatum elucidates its role in pathogenicity, growth, and sporulation, paving the way for functional gene characterization. Similarly, CRISPR-mediated editing in maize alters phenolic metabolism and lignin structure, optimizing biomass for sustainable chemical production.
+
+Finally, CRISPR technology aids in understanding the alkaline resistance of Halomonas alkalicola, revealing adaptive strategies that enhance its industrial applicability. Collectively, these studies underscore CRISPR's profound impact on genomics and biotechnology, offering diverse applications from agriculture to synthetic biology and industrial biotechnology.

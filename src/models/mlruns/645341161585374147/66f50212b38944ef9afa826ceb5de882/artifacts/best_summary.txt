@@ -1,0 +1,13 @@
+The collection of scientific articles highlights the diverse applications and advancements of CRISPR technology in genomics and biotechnology. In the realm of gene editing in porcine embryos, CRISPR/Cas9 has been pivotal in enhancing biomedical and agricultural research. Methods such as somatic cell nuclear transfer and sperm-mediated gene transfer are explored, though challenges like off-target effects and mosaicism persist. The need for refining these methods is crucial for maximizing their potential in agriculture and biomedicine.
+
+In plant biotechnology, CRISPR/Cas-mediated prime editing has shown promise in rice, particularly for in situ epitope tagging. The NM-PE strategy, utilizing SpCas9 and microhomology-mediated end joining, improves tagging efficiency. This advancement facilitates the study of gene function and genetic improvement in rice, as demonstrated by successful tagging of MAP kinase genes.
+
+The development of the EXPERT system extends the capabilities of prime editing by allowing large fragment edits, overcoming limitations of canonical prime editors. This innovation significantly enhances editing efficiency without increasing off-target effects, broadening the scope for biotechnological applications.
+
+In the context of synthetic biology, a molecular proximity sensor utilizing engineered guide RNA demonstrates the potential for programmable molecular circuits. This approach aims to integrate genome editing into synthetic circuits, although challenges in triggering specific molecular events remain.
+
+CRISPR/Cas9 is also employed in fungal genomics, where it elucidates the role of the Pgs gene in Fusarium circinatum, a pathogenic fungus. This study advances our understanding of pathogenicity and opens avenues for functional gene characterization.
+
+In maize, CRISPR/Cas9 editing of the PMT1 gene alters lignin composition, enhancing the potential for lignin-first biomass processing and bio-based chemical production. This strategy exemplifies the dual-purpose crop design for food and renewable feedstock.
+
+Overall, these articles underscore CRISPR's transformative impact across various domains, from agriculture to synthetic biology, highlighting its potential to address complex biological challenges and drive innovation in biotechnology.

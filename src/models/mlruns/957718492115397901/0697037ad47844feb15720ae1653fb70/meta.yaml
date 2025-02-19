@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alkhalifas/Documents/Github/SciRAD/src/models/mlruns/957718492115397901/0697037ad47844feb15720ae1653fb70/artifacts
+end_time: 1738930666671
+entry_point_name: ''
+experiment_id: '957718492115397901'
+lifecycle_stage: active
+run_id: 0697037ad47844feb15720ae1653fb70
+run_name: Topic_1_Run_137
+run_uuid: 0697037ad47844feb15720ae1653fb70
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738930650275
+status: 3
+tags: []
+user_id: alkhalifas

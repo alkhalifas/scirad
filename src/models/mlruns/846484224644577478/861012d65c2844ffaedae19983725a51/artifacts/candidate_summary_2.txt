@@ -1,0 +1,17 @@
+Recent advancements in CRISPR technology have significantly impacted genomics and biotechnology, with diverse applications ranging from agricultural improvements to healthcare innovations. The reviewed articles highlight key methodologies, findings, and implications of CRISPR in these fields.
+
+In porcine embryos, the review discusses the transformative potential of CRISPR/Cas9 in genetic modification for biomedical and agricultural research. Techniques like somatic cell nuclear transfer (SCNT) and sperm-mediated gene transfer (SMGT) are explored, despite challenges like off-target effects and mosaicism. Refining these methods could enhance agricultural applications and biomedical innovations (https://pubmed.ncbi.nlm.nih.gov/39952413/).
+
+CRISPR-based diagnostics are advanced through a DNAzyme-triggered biosensor integrating CRISPR-Cas12a for nucleic acid detection, offering a simplified, one-pot diagnostic method (https://pubmed.ncbi.nlm.nih.gov/39889213/).
+
+The engineering of bacteriophages using CRISPR-Cas systems offers a promising solution to antibiotic-resistant superbugs by enhancing phage specificity and efficacy. This approach underscores the potential of phage therapy in combating antibiotic resistance (https://pubmed.ncbi.nlm.nih.gov/39934535/).
+
+In rice genomics, CRISPR-mediated prime editing has been optimized for efficient in situ epitope tagging, broadening the scope of genetic studies and improvements in rice (https://pubmed.ncbi.nlm.nih.gov/39657918/). Additionally, novel cytidine deaminases have been identified for robust base editing, expanding the targeting scope and efficiency of CRISPR tools in plant genetics (https://pubmed.ncbi.nlm.nih.gov/39950393/).
+
+The EXPERT prime editing system enhances the editing range and efficiency for large fragment edits, demonstrating significant potential in biotechnology applications (https://pubmed.ncbi.nlm.nih.gov/39939583/).
+
+In cancer research, CRISPR/Cas9-mediated editing of BCL11B in lymphoid progenitors showed prolonged anti-leukemic activity, offering insights into tailoring CAR-engineered cell therapies (https://pubmed.ncbi.nlm.nih.gov/39955618/).
+
+Finally, CRISPR-Cas9 has been employed to elucidate the role of the Pgs gene in Fusarium circinatum, advancing understanding of fungal pathogenicity and potential control strategies (https://pubmed.ncbi.nlm.nih.gov/39952463/).
+
+These studies collectively illustrate CRISPR's vast potential in enhancing genetic research and its applications in biotechnology, agriculture, and medicine.

@@ -1,0 +1,9 @@
+The scientific articles reviewed here provide insights into the development and efficacy of quaternary ammonium compounds (QACs) and their derivatives in combating methicillin-resistant Staphylococcus aureus (MRSA) and other resistant bacteria. 
+
+The first article explores "bushy-tailed" multicationic quaternary phosphonium compounds (QPCs) as potent disinfectants. These compounds, characterized by multiple short alkyl or aryl chains, demonstrated strong antimicrobial activity with low mammalian toxicity. Select derivatives showed superior minimum inhibitory concentrations (MICs) compared to traditional QACs, indicating a promising avenue for developing new disinfectants with enhanced therapeutic indices.
+
+The second article investigates gemini quaternary ammonium-functionalized peptide nanoassemblies, which self-assemble into cationic antimicrobial nanomaterials. These structures exhibit multiple antibacterial mechanisms, low cytotoxicity, and a reduced tendency for resistance development, making them potential candidates for addressing antimicrobial-resistant infections.
+
+The third article highlights the modification of lefamulin, a pleuromutilin antibiotic, by introducing a quaternary ammonium group to enhance organ targeting and pharmacological properties. This modification improved drug delivery to the liver and kidneys via organic cation transporters, offering a novel approach to treating multidrug-resistant bacterial infections.
+
+Collectively, these studies underscore the potential of QACs and their derivatives in developing new antimicrobial agents. By enhancing the structural diversity of QACs and integrating them with other therapeutic modalities, researchers can create more effective and targeted treatments against resistant bacterial strains like MRSA. These innovations hold significant implications for infection control and the management of antibiotic resistance, addressing a critical need in global health.

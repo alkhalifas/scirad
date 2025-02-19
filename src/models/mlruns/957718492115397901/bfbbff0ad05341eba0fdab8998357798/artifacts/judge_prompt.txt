@@ -1,0 +1,32 @@
+You are an expert reviewer tasked with evaluating a scientific summary based on the following criteria:
+1. **Accuracy**: Does the summary correctly reflect the key points and findings of the articles?
+2. **Completeness**: Does the summary include all major findings without omitting essential information?
+3. **Clarity**: Is the summary clear, well-structured, and easy to understand?
+4. **Conciseness**: Is the summary concise, avoiding unnecessary verbosity while retaining essential details?
+5. **Relevance**: Is all included information pertinent to the main topic without introducing unrelated content?
+6. **Objectivity**: Is the summary unbiased, presenting information factually without personal opinions or interpretations?
+
+**Original Abstracts:**
+A novel series of steroidal β-carboline quaternary ammonium derivatives (SCQADs) derived from natural cholic acid and its derivatives was designed, synthesized and biologically evaluated against four Gram-positive bacteria for the first time. Most of these derivatives exhibited promising antibacterial activity against the tested strains, particularly, compound 21g displayed strong antibacterial activity against MRSA (MIC = 0.5-1 μg/mL) with low cytotoxicity. Meanwhile, derivative 21g was able to quickly kill Gram-positive bacteria within 0.5 h without inducing bacterial resistance. Preliminary mechanistic explorations indicated that compound 21g destroyed bacterial cell membranes to exert its antibacterial effects. Moreover, 21g exhibited high in vivo efficacy and high survival protection in a mouse skin abscess model. These findings suggested that compound 21g has great potential to develop as an antibacterial agent.
+
+As the harm of benzalkyl dimethylammonium compounds (BACs) on human health and environment was discovered, alkyltrimethyl ammonium compound (ATMAC) and dialkyldimethyl ammonium compound (DADMAC), which belong to quaternary ammonium compounds (QACs), were likely to replace BACs as the main disinfectants. This study simulated the iterative use of QACs to explore their impact on resistance genes (RGs) in nitrification systems pre-contaminated by BACs. ATMAC could initiate and maintain partial nitrification. DADMAC generated higher levels of reactive oxygen species and lactate dehydrogenase, leading to increased biological toxicity in bacteria. The abundance of intracellular RGs of sludge was higher with the stress of QACs. DADMAC also induced higher extracellular polymeric substance secretion. Moreover, it facilitated the transfer of RGs from sludge to water, with ATMAC disseminating RGs through si-tnpA-04 and DADMAC through si-intI1. Sediminibacterium might be potential hosts for RGs. This study offered insights into disinfectant usage in the post-COVID-19 era.
+
+**Generated Summary:**
+Article 1 discusses a study on the effectiveness of quaternary ammonium compounds (QACs) in combating MRSA. The researchers found that QACs were highly effective in killing MRSA strains, even those that were resistant to antibiotics. The study used a combination of in vitro and in vivo experiments to demonstrate the efficacy of QACs against MRSA. The implications of this research suggest that QACs could be a valuable tool in the fight against antibiotic-resistant bacteria like MRSA.
+
+Article 2 focuses on the mechanism of action of QACs against MRSA. The study found that QACs disrupt the cell membrane of MRSA, leading to cell death. Using advanced imaging techniques, the researchers were able to visualize this process in detail. The findings suggest that QACs could be a promising alternative to traditional antibiotics for treating MRSA infections. The implications of this research highlight the potential of QACs as a novel approach to combating antibiotic-resistant bacteria.
+
+In summary, research on quaternary ammonium compounds (QACs) has shown promising results in combating MRSA. Studies have demonstrated the effectiveness of QACs in killing MRSA strains and disrupting their cell membranes. These findings suggest that QACs could be a valuable tool in the fight against antibiotic-resistant bacteria like MRSA, offering a potential alternative to traditional antibiotics. Further research in this area could lead to the development of new treatment strategies for MRSA infections.
+
+For each criterion, provide a score out of 10 and a brief comment. Remember the summary is supposed to be a 300-word high-level summary and will purposefully only discuss key findings while omitting specific details.Format the output as a JSON object with each criterion as a key, containing the score and comment. Additionally, provide an overall score out of 60.
+
+**Example Output (JSON only, no markdown or code fences):**
+{
+  "Accuracy": {"score": 9, "comment": "The summary accurately reflects the key findings of the articles."},
+  "Completeness": {"score": 8, "comment": "Most major aspects are included, but some details are missing."},
+  "Clarity": {"score": 9, "comment": "The summary is clear and well-structured."},
+  "Conciseness": {"score": 8, "comment": "The summary is concise and avoids unnecessary verbosity."},
+  "Relevance": {"score": 9, "comment": "All included information is pertinent to the main topic."},
+  "Objectivity": {"score": 10, "comment": "The summary is unbiased and presents information factually."},
+  "Overall Score": 53
+}

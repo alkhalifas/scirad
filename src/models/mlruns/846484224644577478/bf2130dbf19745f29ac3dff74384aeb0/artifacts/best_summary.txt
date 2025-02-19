@@ -1,0 +1,17 @@
+CRISPR technology has been pivotal in advancing genomics and biotechnology, as highlighted by several recent studies. In porcine embryos, CRISPR/Cas9 is used for genetic modifications, employing methods like SCNT, microinjection, and electroporation. These techniques, while revolutionary, face challenges such as off-target effects and mosaicism, necessitating methodological refinements for enhanced agricultural and biomedical applications.
+
+In diagnostics, a novel DNAzyme-triggered CRISPR-Cas12a biosensor integrates with recombinase-polymerase amplification to improve nucleic acid testing, simplifying procedures and enhancing efficiency. This innovation could significantly advance point-of-care diagnostics due to its one-pot diagnostic capability.
+
+CRISPR's application in combating antibiotic-resistant superbugs is explored through engineered bacteriophages. By utilizing CRISPR-Cas systems, bacteriophages can be precisely modified to target specific bacterial strains, offering a promising alternative to traditional antibiotics. This approach, however, requires careful consideration of ethical and safety implications.
+
+In plant genomics, CRISPR-mediated prime editing has been employed for efficient epitope tagging in rice. The NM-PE strategy enables precise gene tagging, facilitating studies on gene expression and interactions, which are critical for genetic improvement and crop research.
+
+Furthermore, novel cytidine deaminases from the animal kingdom have been harnessed for robust base editing in rice, expanding the scope of CRISPR base editors. This advancement allows for precise C-to-T conversions with minimal off-target effects, enhancing genetic engineering capabilities in plants.
+
+The EXPERT system represents a leap in prime editing, allowing large fragment edits by modifying pegRNA and utilizing additional sgRNA. This method significantly boosts editing efficiency without increasing off-target effects, broadening the potential applications in genomics.
+
+In medical applications, CRISPR/Cas9-mediated editing of BCL11B in lymphoid progenitors fosters NK-like cell development with enhanced anti-leukemic activity. This strategy underscores the potential of CRISPR in developing advanced cancer therapies.
+
+Lastly, CRISPR-Cas9's role in understanding plant pathogenicity is demonstrated in Fusarium circinatum, where gene editing revealed insights into the pathogen's growth and virulence, paving the way for future research on plant disease resistance.
+
+These studies collectively underscore CRISPR's transformative impact across genomics and biotechnology, offering novel solutions and insights into complex biological systems.

@@ -1,0 +1,11 @@
+The collection of scientific articles highlights the transformative role of CRISPR technology in genomics and biotechnology, showcasing its diverse applications and potential advancements. In the realm of gene editing in porcine embryos, CRISPR/Cas9 is pivotal for biomedical and agricultural research, with methodologies like SCNT and microinjection being explored. Despite challenges such as off-target effects and mosaicism, refining these techniques could enhance agricultural and biomedical applications.
+
+In diagnostics, a novel CRISPR-Cas12a biosensor integrated with DNAzyme-triggered equilibrium transfer simplifies nucleic acid detection, promising more efficient diagnostic procedures. Meanwhile, bacteriophage engineering, leveraging CRISPR-Cas systems, offers a promising approach to combat antibiotic-resistant superbugs, enhancing phage specificity and efficacy.
+
+In plant genomics, CRISPR-based prime editing and cytidine base editors (CBEs) are advancing rice genetic studies. The NM-PE strategy facilitates efficient gene tagging, while novel cytidine deaminases expand CBE capabilities, offering precise and multiplexed base editing with minimal off-target effects. The EXPERT system further extends prime editing's range, enabling large fragment edits with improved efficiency and safety.
+
+In synthetic biology, a molecular proximity sensor using engineered guide RNA demonstrates potential for programmable molecular circuits, linking protein interactions to genome editing. In medical biotechnology, CRISPR/Cas9-mediated Bcl11b knockout in lymphoid progenitors enhances CAR-engineered cell development, offering prolonged anti-leukemic activity.
+
+Lastly, CRISPR-Cas9's role in pathogen research is exemplified by the functional characterization of the Pgs gene in Fusarium circinatum, revealing its involvement in pathogenicity and growth. This study underscores CRISPR's utility in understanding pathogen biology and developing targeted interventions.
+
+Overall, these articles underscore CRISPR's versatility and potential to revolutionize genomics and biotechnology, driving innovations across agriculture, medicine, and synthetic biology.

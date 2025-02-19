@@ -1,0 +1,13 @@
+The recent advancements in CRISPR technology have significantly impacted the fields of genomics and biotechnology, as demonstrated by various studies exploring its applications in different organisms. In "Navigating gene editing in porcine embryos," CRISPR/Cas9 is highlighted as a transformative tool for genetic modification in porcine embryos, with methodologies such as somatic cell nuclear transfer and microinjection being evaluated for their efficacy and challenges like off-target effects and mosaicism. This study emphasizes the need for improved accuracy in gene editing to enhance agricultural and biomedical applications.
+
+In rice genomics, the study "Efficient in situ epitope tagging of rice genes by nuclease-mediated prime editing" introduces a novel NM-PE strategy, enhancing gene tagging efficiency using CRISPR/Cas nucleases. This method has been successfully applied to tag MAP kinase genes, indicating its potential for broader applications in gene function studies and genetic improvements in rice.
+
+The exploration of cytidine deaminases in "Harnessing novel cytidine deaminases from the animal kingdom for robust multiplexed base editing in rice" expands the toolkit for precise base editing. Screening 66 deaminases, the study identifies candidates with high efficiency and minimal off-target effects, particularly highlighting the OoA3GX2 enzyme from orcas for its broad targeting capabilities.
+
+In the realm of synthetic biology, the "EXPERT" system expands the capabilities of prime editing by allowing modifications on both sides of the target sequence, significantly improving editing efficiency for large fragments without increasing off-target effects.
+
+CRISPR technology also facilitates advancements in cancer immunotherapy, as seen in "Targeting BCL11B in CAR-engineered lymphoid progenitors," where CRISPR/Cas9-mediated knockout of Bcl11b in progenitors enhances anti-leukemic activity, offering insights into tailoring CAR-engineered cells for improved therapeutic outcomes.
+
+Furthermore, CRISPR/Cas9 is employed to investigate pathogenicity genes in Fusarium circinatum, revealing the role of the Pgs gene in fungal growth and virulence, while in maize, editing the ZmPMT1 gene alters lignin composition, optimizing biomass for biorefining processes.
+
+Collectively, these studies underscore CRISPR's versatility in genomics and biotechnology, offering innovative solutions for agricultural, medical, and industrial challenges.

@@ -1,0 +1,13 @@
+The collection of scientific articles highlights the transformative role of CRISPR technology in genomics and biotechnology, showcasing its diverse applications across various organisms and contexts. In the realm of porcine embryos, CRISPR/Cas9 has been pivotal in genetic modifications, with methodologies like somatic cell nuclear transfer and microinjection being explored. Despite challenges such as off-target effects and mosaicism, advancements in these techniques are crucial for agricultural and biomedical innovations.
+
+In plant genomics, CRISPR-mediated prime editing has been effectively utilized for in situ epitope tagging in rice, enhancing gene function studies and genetic improvements. The development of the NM-PE strategy, which employs SpCas9 and microhomology-mediated end joining, has streamlined gene tagging processes, broadening the scope of genetic modifications in rice.
+
+The exploration of novel cytidine deaminases for base editing in rice has expanded the capabilities of CRISPR-based cytosine base editors, allowing for precise C-to-T conversions with minimal off-target effects. This advancement holds promise for multiplexed base editing, crucial for genetic improvements in crops.
+
+In synthetic biology, the EXPERT system has enhanced prime editing by enabling large fragment edits, significantly improving editing efficiency without increasing off-target effects. This innovation is poised to advance life sciences by facilitating complex genetic modifications.
+
+CRISPR technology has also been applied in medical biotechnology, as demonstrated by the targeting of BCL11B in CAR-engineered lymphoid progenitors, which enhances anti-leukemic activity. This approach underscores the potential of CRISPR in developing novel cancer therapies.
+
+In microbial genomics, CRISPR/Cas9 has been used to elucidate the role of specific genes in pathogenicity and stress responses, as seen in studies on Fusarium circinatum and Halomonas alkalicola. These insights pave the way for improved disease management and industrial applications.
+
+Overall, these studies underscore CRISPR's versatility and potential to drive significant advancements in genomics and biotechnology, offering new avenues for research and application across various fields.

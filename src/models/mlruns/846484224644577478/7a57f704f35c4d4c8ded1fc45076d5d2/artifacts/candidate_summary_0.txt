@@ -1,0 +1,13 @@
+The exploration of CRISPR technology in genomics and biotechnology has led to significant advancements across various fields, as demonstrated by recent studies. In porcine embryos, CRISPR/Cas9 has been pivotal for genetic modifications, with methodologies like SCNT, microinjection, and electroporation being assessed for efficiency and limitations. Challenges such as high off-target effects and mosaicism persist, necessitating improved precision for agricultural and biomedical applications.
+
+In diagnostics, a novel CRISPR-Cas12a biosensor integrates with DNAzyme-triggered equilibrium transfer, simplifying nucleic acid detection. This advancement highlights CRISPR's potential in enhancing diagnostic accuracy and efficiency. Similarly, CRISPR's role in combating antibiotic-resistant superbugs is underscored by engineered bacteriophages. By manipulating phage genomes through CRISPR-Cas systems, these phages exhibit enhanced efficacy against resistant bacteria, indicating a promising avenue for addressing global health challenges.
+
+In plant genomics, CRISPR-mediated prime editing has facilitated efficient epitope tagging in rice, broadening the scope for gene function studies and genetic improvements. The NM-PE strategy, utilizing SpCas9 and MMEJ, demonstrates enhanced tagging capabilities, illustrating CRISPR's transformative impact on plant biotechnology.
+
+The development of EXPERT, an extended prime editor system, expands the editing range for large genomic fragments, significantly improving editing efficiency without increasing off-target effects. This advancement enhances CRISPR's applicability in complex genomic edits.
+
+In medical biotechnology, targeting BCL11B in CAR-engineered lymphoid progenitors using CRISPR/Cas9 fosters NK-like cell development, enhancing anti-leukemic activity. This approach illustrates CRISPR's potential in developing targeted immunotherapies.
+
+Additionally, CRISPR-Cas9 has been used to elucidate the role of the Pgs gene in Fusarium circinatum, a pathogen affecting pine species. The study highlights CRISPR's utility in functional genomics, aiding in understanding pathogen biology and developing disease management strategies.
+
+Overall, these studies underscore CRISPR's versatility and transformative potential across genomics and biotechnology, paving the way for innovative solutions to complex biological challenges.
