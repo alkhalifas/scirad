@@ -1,0 +1,7 @@
+requests
+mlflow
+streamlit
+langchain
+tiktoken
+nltk
+numexpr

@@ -1,9 +1,0 @@
-Article 1:
-Title: "Quaternary Ammonium Compounds: An Antimicrobial Mainstay and Platform for Innovation to Address Bacterial Resistance"
-Abstract: This review discusses the effectiveness of quaternary ammonium compounds (QACs) as antimicrobial agents and their potential for combating bacterial resistance, particularly against MRSA.
-
-Article 2:
-Title: "Quaternary Ammonium Compounds: An Antimicrobial Mainstay and Platform for Innovation to Address Bacterial Resistance"
-Abstract: This study investigates the efficacy of quaternary ammonium compounds (QACs) in combating MRSA infections by disrupting the bacterial cell membrane and inhibiting biofilm formation.
-
-Summary: Research on quaternary ammonium compounds (QACs) highlights their effectiveness as antimicrobial agents against MRSA, a notorious antibiotic-resistant bacterium. Studies have shown that QACs disrupt the bacterial cell membrane and inhibit biofilm formation, making them a promising solution for combating MRSA infections. This research underscores the potential of QACs as a valuable tool in the fight against bacterial resistance and the development of innovative strategies to address this growing public health concern.

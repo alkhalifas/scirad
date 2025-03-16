@@ -1,7 +1,0 @@
-Article 1: 
-Title: "Antimicrobial activity of quaternary ammonium compounds against multidrug-resistant Staphylococcus aureus, Staphylococcus epidermidis and Klebsiella pneumoniae"
-Summary: The study investigated the antimicrobial activity of quaternary ammonium compounds (QACs) against multidrug-resistant strains of Staphylococcus aureus, Staphylococcus epidermidis, and Klebsiella pneumoniae. The researchers found that QACs effectively inhibited the growth of these resistant bacteria, with varying degrees of effectiveness depending on the specific QAC compound used. The study also highlighted the importance of further research into QACs as potential weapons against antibiotic-resistant bacteria.
-
-Article 2: 
-Title: "Inhibition of Methicillin-resistant Staphylococcus aureus by a quaternary ammonium compound: Potential use in nasal decolonization"
-Summary: This study focused on the use of a specific quaternary ammonium compound (QAC) for inhibiting Methicillin-resistant Staphylococcus aureus (MRSA) in nasal decolonization. The researchers found that the QAC effectively reduced MRSA colonization in the nasal passages of patients, suggesting its potential use in preventing MRSA infections. The study emphasized the importance of further research to explore the full potential of QACs in combating antibiotic-resistant bacteria like MRSA.
