@@ -1034,7 +1034,8 @@ class IntelligentAgent:
 
 def run_experiment(agent_keywords, agent_description, model_names, temperatures, top_ps, summary_word_counts, prompting_methods, enable_rankings, topic_id):
     """
-    Runs experiments over combinations of model names, temperatures, top-p values, summary word counts, prompting methods, and ranking flags for a specific topic.
+    Runs experiments over combinations of model names, temperatures, top-p values, summary word counts,
+    prompting methods, and ranking flags for a specific topic, logging detailed initial and follow-up judge evaluations.
 
     Parameters:
         agent_keywords (list): List of keywords for PubMed search.
@@ -1048,18 +1049,18 @@ def run_experiment(agent_keywords, agent_description, model_names, temperatures,
         topic_id (int): Identifier for the current topic.
     """
 
-    # Calculate total runs for tqdm progress bar
     total_runs = len(model_names) * len(temperatures) * len(top_ps) * len(summary_word_counts) * len(prompting_methods) * len(enable_rankings)
 
     with tqdm(total=total_runs, desc=f"Running experiments for Topic {topic_id}", unit="run") as pbar:
         for idx, (model_name, temperature, top_p, summary_word_count, prompting_method, enable_ranking) in enumerate(itertools.product(
             model_names, temperatures, top_ps, summary_word_counts, prompting_methods, enable_rankings
         ), start=1):
+
             run_name = f"Topic_{topic_id}_Run_{idx}"
+
             with mlflow.start_run(run_name=run_name):
                 logger.info(f"Starting Run {idx} for Topic {topic_id} with parameters:")
 
-                # Log parameters
                 mlflow.log_param("keywords", ", ".join(agent_keywords))
                 mlflow.log_param("framework", "single_agent")
                 mlflow.log_param("description", agent_description)
@@ -1071,7 +1072,6 @@ def run_experiment(agent_keywords, agent_description, model_names, temperatures,
                 mlflow.log_param("judge_model", "gpt-3.5-turbo")
                 mlflow.log_param("enable_ranking", enable_ranking)
 
-                # Initialize the agent
                 try:
                     agent = IntelligentAgent(
                         keywords=agent_keywords,
@@ -1086,79 +1086,111 @@ def run_experiment(agent_keywords, agent_description, model_names, temperatures,
                 except ValueError as ve:
                     logger.error(f"Initialization Error: {ve}")
                     mlflow.log_param("initialization_error", str(ve))
-                    pbar.update(1)  # Update tqdm progress
-                    continue  # Skip to next run
+                    pbar.update(1)
+                    continue
 
-                # Process and get results
                 try:
                     results = agent.process()
                 except Exception as e:
                     logger.error(f"Processing Error: {e}")
                     mlflow.log_param("processing_error", str(e))
-                    pbar.update(1)  # Update tqdm progress
-                    continue  # Skip to next run
+                    pbar.update(1)
+                    continue
 
-                # Log results
                 if results['metrics']:
                     for metric, score in results['metrics'].items():
                         mlflow.log_metric(metric, score)
 
-                if results['judge_evaluation']:
-                    if "error" in results['judge_evaluation']:
-                        mlflow.log_param("judge_error", results['judge_evaluation']['error'])
+                # Log initial judge evaluation
+                initial_judge = results.get('judge_evaluation', {})
+                if initial_judge:
+                    if "error" in initial_judge:
+                        mlflow.log_param("judge_initial_error", initial_judge["error"])
+                        mlflow.log_text(initial_judge.get('evaluation', 'No evaluation text'), "judge_initial_evaluation.txt")
                     else:
-                        for criterion, evaluation in results['judge_evaluation'].items():
+                        for criterion, evaluation in initial_judge.items():
                             if criterion != "Overall Score":
-                                mlflow.log_metric(f"Judge_{criterion}", evaluation['score'])
-                        mlflow.log_metric("Judge_Overall_Score", results['judge_evaluation'].get("Overall Score", 0))
+                                mlflow.log_metric(f"Initial_Judge_{criterion}", evaluation.get('score', 0))
+                                mlflow.log_param(f"Initial_Judge_{criterion}_Comment", evaluation.get('comment', ''))
+                        mlflow.log_metric("Initial_Judge_Overall_Score", initial_judge.get("Overall Score", 0))
+                        mlflow.log_text(json.dumps(initial_judge, indent=2), "judge_initial_evaluation.json")
+
+                # Log follow-up judge evaluation
+                followup_judge = results.get('followup_judgment', {})
+                if followup_judge:
+                    if "error" in followup_judge:
+                        mlflow.log_param("judge_followup_error", followup_judge["error"])
+                        mlflow.log_text(followup_judge.get('evaluation', 'No evaluation text'), "judge_followup_evaluation.txt")
+                    else:
+                        for criterion, evaluation in followup_judge.items():
+                            if criterion != "Overall Score":
+                                mlflow.log_metric(f"Followup_Judge_{criterion}", evaluation.get('score', 0))
+                                mlflow.log_param(f"Followup_Judge_{criterion}_Comment", evaluation.get('comment', ''))
+                        mlflow.log_metric("Followup_Judge_Overall_Score", followup_judge.get("Overall Score", 0))
+                        mlflow.log_text(json.dumps(followup_judge, indent=2), "judge_followup_evaluation.json")
 
                 mlflow.log_metric("average_similarity_all_articles", results.get("average_similarity_all", 0.0))
                 mlflow.log_metric("average_similarity_top_10_articles", results.get("average_similarity_top", 0.0))
-
                 mlflow.log_text(results['summary'], "summary.txt")
-                if "evaluation" in results['judge_evaluation']:
-                    mlflow.log_text(results['judge_evaluation']['evaluation'], "judge_evaluation.txt")
 
                 num_articles = agent.latest_pubmed_search.get("num_articles", 0)
                 mlflow.log_param("num_articles", num_articles)
 
-                pbar.update(1)  # Update tqdm progress after each run
-                time.sleep(2)  # Avoid rapid API calls
+                pbar.update(1)
+                time.sleep(2)
+
 
 
 
 if __name__ == "__main__":
     # Define multiple topics from various domains
     topics = [
-        {
-            "keywords": ["quaternary", "ammonium", "compound"],
-            "description": "research relating to quaternary ammonium compounds, also known as QACs, and how they combat MRSA"
-        },
-        {
-            "keywords": ["biotechnology", "genomics", "CRISPR"],
-            "description": "explorations of CRISPR technology in the field of genomics and its applications in biotechnology"
-        },
-        {
-            "keywords": ["agent", "framework", "artificial"],
-            "description": "agent and multiagent based frameworks for artificial intelligence models and systems"
-        },
-        {
-            "keywords": ["climate", "change", "carbon"],
-            "description": "studies on the impact of carbon emissions on climate change and global warming trends"
-        },
-        {
-            "keywords": ["renewable", "energy", "solar"],
-            "description": "investigations into the efficiency and scalability of solar energy technologies in renewable energy sectors"
-        },
-        {
-            "keywords": ["carbonated", "beverages", "seltzer"],
-            "description": "health effects of carbonated drinks including seltzer on the human body"
-        },
-    ]
+    {
+        "keywords": ["mRNA", "vaccine", "immunology"],
+        "description": "Latest advancements and applications of mRNA vaccines in infectious disease immunology."
+    },
+    {
+        "keywords": ["nanoparticle", "drug-delivery", "cancer"],
+        "description": "Research on nanoparticles enhancing targeted drug-delivery systems for cancer therapies."
+    },
+    {
+        "keywords": ["microbiome", "gut-health", "probiotics"],
+        "description": "Studies exploring gut microbiome's role in health through probiotic interventions."
+    },
+    {
+        "keywords": ["bioinformatics", "genome", "sequencing"],
+        "description": "Innovations in bioinformatics for efficient genome sequencing and data analysis methods."
+    },
+    {
+        "keywords": ["stem-cells", "regeneration", "therapy"],
+        "description": "Emerging therapies utilizing stem cells for tissue regeneration and medical applications."
+    },
+    {
+        "keywords": ["AI", "protein", "folding"],
+        "description": "Advancements using artificial intelligence to accurately predict protein-folding structures."
+    },
+    {
+        "keywords": ["bioplastics", "sustainability", "polymers"],
+        "description": "Research on bioplastics and sustainable polymer alternatives reducing environmental impact."
+    },
+    {
+        "keywords": ["gene-therapy", "genetic-disorders", "vectors"],
+        "description": "Innovative gene therapy techniques using viral vectors to treat genetic disorders."
+    },
+    {
+        "keywords": ["biosensors", "diagnostics", "point-of-care"],
+        "description": "Development of biosensors enhancing rapid diagnostics for point-of-care medical applications."
+    },
+    {
+        "keywords": ["epigenetics", "gene-expression", "disease"],
+        "description": "Exploration of epigenetic mechanisms regulating gene-expression changes linked to disease."
+    }
+]
+
 
     # Define parameter ranges
     model_names = ["gpt-3.5-turbo"]  # Ensure these models are supported
-    temperatures = [0.2]  # Low to moderate randomness
+    temperatures = [0.0, 0.2, 0.5]  # Low to moderate randomness
     top_ps = [1.0]  # Typical values
     summary_word_counts = [300]  # Desired summary lengths in words
     prompting_methods = [

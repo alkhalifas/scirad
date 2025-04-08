@@ -1,3 +1,4 @@
 mlruns
+.env
 .venv
 src/scirad/models/mlruns
