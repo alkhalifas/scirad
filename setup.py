@@ -4,9 +4,9 @@ setup(
     name="scirad",
     version="0.1.0",
     description="A scientific research and summarization tool.",
-    author="Your Name",
-    author_email="your.email@example.com",
-    url="https://github.com/your_username/scirad",
+    author="Saleh A.",
+    author_email="salehesam@gmail.com.com",
+    url="https://github.com/alkhalifas/scirad",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     include_package_data=True,  # Includes files specified in MANIFEST.in

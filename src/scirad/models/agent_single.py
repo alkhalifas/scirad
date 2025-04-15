@@ -1189,15 +1189,15 @@ if __name__ == "__main__":
 
 
     # Define parameter ranges
-    model_names = ["gpt-3.5-turbo"]  # Ensure these models are supported
-    temperatures = [0.0, 0.2, 0.5]  # Low to moderate randomness
-    top_ps = [1.0]  # Typical values
-    summary_word_counts = [300]  # Desired summary lengths in words
+    model_names = ["gpt-3.5-turbo"]
+    temperatures = [0.0, 0.2, 0.5]
+    top_ps = [1.0]
+    summary_word_counts = [300]
     prompting_methods = [
         "Chain of Thought",
         "Tree of Thought"
     ]
-    enable_rankings = [True, False]  # New parameter for ranking toggle
+    enable_rankings = [True, False]
 
     # Set the experiment name
     mlflow.set_experiment("IntelligentAgent_Optimization_Sum_Ret_v1")
