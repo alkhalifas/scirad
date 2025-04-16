@@ -5,29 +5,21 @@ import sys
 import requests
 import logging
 import xml.etree.ElementTree as ET
-from dotenv import load_dotenv
 from langchain.agents import initialize_agent, Tool, AgentType
 from langchain.memory import ConversationBufferMemory
-from langchain_openai import ChatOpenAI  # Updated import
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain_openai import ChatOpenAI
 from langchain_community.embeddings import OpenAIEmbeddings
-import numexpr  # For secure mathematical evaluations
+import numexpr
 import json
 import re
-from datetime import datetime, timedelta
 import mlflow
 import time
 import itertools
 from tqdm import tqdm
 from dotenv import load_dotenv, find_dotenv
-
-# Metrics Libraries
 from rouge_score import rouge_scorer
 import nltk
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
-
-# Token Counting Library
 import tiktoken
 
 # Initialize NLTK data
@@ -139,10 +131,10 @@ class IntelligentAgent:
         # Initialize Embedding Model for Ranking
         self.embedding_model = OpenAIEmbeddings(openai_api_key=self.openai_api_key)
 
-        # Initialize Memory
+        # Initialize memory
         self.memory = ConversationBufferMemory(memory_key="memory", memory_buffer=50)  # Adjust 'memory_buffer' as needed
 
-        # Initialize Tools
+        # Initialize tools
         self.tools = [
             Tool(
                 name="Calculator",
@@ -168,11 +160,11 @@ class IntelligentAgent:
             )
         ]
 
-        # Initialize Agent
+        # Initialize agent
         self.agent = initialize_agent(
             tools=self.tools,
             llm=self.llm,
-            agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,  # Changed AgentType
+            agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
             verbose=True,
             memory=self.memory
         )
@@ -327,8 +319,7 @@ class IntelligentAgent:
 
         response.raise_for_status()
 
-        # **Add Sleep Here**
-        time.sleep(3)  # Sleep for 3 seconds
+        time.sleep(3)
 
         esearch_result = response.json().get("esearchresult", {})
         idlist = esearch_result.get("idlist", [])
@@ -362,8 +353,7 @@ class IntelligentAgent:
 
         response.raise_for_status()
 
-        # **Add Sleep Here**
-        time.sleep(3)  # Sleep for 3 seconds
+        time.sleep(3)
 
         root = ET.fromstring(response.text)
         articles_info = []
@@ -501,16 +491,17 @@ class IntelligentAgent:
         return prompt_template
 
     def extend_search_if_no_results(self):
-        current_weeks_back = 1  # Start with 1 week
+
+        current_weeks_back = 1
+
         while current_weeks_back <= self.max_search_weeks:
             logger.info(f"Searching PubMed for the last {current_weeks_back} week(s).")
             search_prompt = self.generate_search_prompt(current_weeks_back)
             articles = self.pubmed_search_tool(search_prompt)
+
             # If we get real articles, break out
             if articles != "No articles found for the given criteria.":
                 logger.info(f"Articles found with {current_weeks_back} week(s) back.")
-                # At this point, self.latest_pubmed_search["days_back"]
-                # should be current_weeks_back * 7 inside pubmed_search_tool()
                 return True
             else:
                 logger.info(f"No articles found with {current_weeks_back} week(s) back. Extending search.")
@@ -530,9 +521,11 @@ class IntelligentAgent:
         cleaned_abstracts = []
         for article in articles:
             text = article['abstract']
+
             # 1) Cast to string if None or any other type:
             if not isinstance(text, str):
                 text = "" if text is None else str(text)
+
             # 2) Truncate if it's extremely long (e.g. over 4000 chars)
             max_chars = 4000
             if len(text) > max_chars:
@@ -565,9 +558,10 @@ class IntelligentAgent:
 
         # --- 1) Cast/truncate each abstract ---
         cleaned_abstracts = []
-        max_chars = 4000  # Adjust if needed
+        max_chars = 4000
         for article in articles:
             text = article["abstract"]
+
             # Ensure it's a string (handle None or other data types)
             if not isinstance(text, str):
                 text = "" if text is None else str(text)
@@ -694,8 +688,7 @@ class IntelligentAgent:
 
         # Send the final combined prompt to the LLM
         summary_response = self.llm([
-            {"role": "user", "content": final_prompt}
-        ])
+            {"role": "user", "content": final_prompt}])
 
         summary = summary_response.content
         logger.info("Summary generation completed.")
@@ -805,7 +798,7 @@ class IntelligentAgent:
             f"}}"
         )
 
-        self.judge_prompt = judge_prompt  # Store the Judge prompt
+        self.judge_prompt = judge_prompt
 
         logger.info("Judging the summary using the Judge Agent.")
         # Modify the prompt to fit the expected message format
@@ -832,8 +825,7 @@ class IntelligentAgent:
                 "evaluation": evaluation
             }
 
-        # **Add Sleep Here**
-        time.sleep(1)  # Sleep for 1 second
+        time.sleep(1)
 
         # Calculate token usage and cost for judge evaluation
         input_tokens = self.get_token_count(judge_prompt)
@@ -926,7 +918,7 @@ class IntelligentAgent:
         keywords_text = response.content.strip()
 
         # Attempt to split the response into keywords
-        # Assuming the response is a comma-separated list of keywords
+        # Assuming the response is a comma-separated list of keywords? Try 2 if no
         keywords = [kw.strip() for kw in keywords_text.split(",") if kw.strip()]
 
         # If the LLM returns fewer keywords than requested, log a warning
@@ -951,8 +943,8 @@ class IntelligentAgent:
                 "ranking_metric": 0.0,
                 "average_similarity_all": 0.0,
                 "average_similarity_top": 0.0,
-                "agent_prompt": agent_prompt,  # Include Agent prompt used in the no-articles case
-                "judge_prompt": ""  # No Judge prompt as there's no summary
+                "agent_prompt": agent_prompt,
+                "judge_prompt": ""
             }
 
         # Step 1.5: Compute similarity for all articles
@@ -1215,7 +1207,7 @@ if __name__ == "__main__":
             summary_word_counts=summary_word_counts,
             prompting_methods=prompting_methods,
             enable_rankings=enable_rankings,
-            topic_id=idx  # Pass the topic identifier
+            topic_id=idx
         )
 
     logger.info("All experiments completed. You can view the results using the MLflow UI with `mlflow ui`.")
