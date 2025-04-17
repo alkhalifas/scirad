@@ -309,7 +309,7 @@ if __name__ == "__main__":
     agent = IntelligentAgent(
         keywords=keywords,
         description=description,
-        model_name="gpt-3.5-turbo",  # or your model of choice
+        model_name="gpt-3.5-turbo",
         temperature=0.2,
         top_p=1.0,
         summary_word_count=300,
