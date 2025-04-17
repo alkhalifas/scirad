@@ -100,6 +100,9 @@ SciRAD is also available as a PyPi package:
    ```bash
    pip install scirad # Not online yet!
    
+   python setup.py sdist bdist_wheel
+   pip install build
+   python -m build
    pip uninstall scirad
    pip install dist/scirad-0.1.1‑py3-none-any.whl
 
