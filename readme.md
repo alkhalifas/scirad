@@ -98,7 +98,11 @@ A comprehensive set of tests is included to validate API endpoints and core func
 SciRAD is also available as a PyPi package:
 1. **Install the package:**
    ```bash
-   pip install scirad # Currently local only!
+   pip install scirad # Not online yet!
+   
+   pip uninstall scirad
+   pip install dist/scirad-0.1.1‑py3-none-any.whl
+
    ```
 2. **Example Usage:**
    ```python
