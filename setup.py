@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="scirad",
-    version="0.1.0",
+    version="0.1.1",
     description="A scientific research and summarization tool.",
     author="Saleh A.",
     author_email="salehesam@gmail.com.com",
