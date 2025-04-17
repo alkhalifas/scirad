@@ -15,6 +15,8 @@ SciRAD streamlines the process of literature review and synthesis by:
 - **Evaluation:** Computes quality metrics (ROUGE, BLEU, etc.) and uses a secondary judge agent to assess the summary’s clarity, accuracy, and objectivity.
 - **Multiple Interfaces:** SciRAD is accessible via a Streamlit interface, a Flask API, as well as a packaged PyPi distribution, and comes with a comprehensive test suite.
 
+![alt text](./content/screenshot.png)
+
 ## How It Works
 
 1. **PubMed Search:**  
@@ -31,6 +33,8 @@ SciRAD streamlines the process of literature review and synthesis by:
    
 5. **Flexible Deployment:**  
    Whether you prefer a web interface (Streamlit), an API (Flask), or using SciRAD as a Python package, the tool is designed to adapt to various research workflows.
+
+![alt text](./content/steps.png)
 
 ## Quick Start
 
