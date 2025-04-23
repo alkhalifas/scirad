@@ -55,9 +55,8 @@ SciRAD includes a Streamlit front-end to visualize and interact with the summari
    ```
 2. **Run the Streamlit app:**
    ```bash
-   streamlit run path/to/your/streamlit_app.py
+   streamlit run streamlit_app.py
    ```
-   Replace `path/to/your/streamlit_app.py` with the path to the provided Streamlit file.
 
 ### Running the Flask API
 SciRAD provides a Flask API that exposes the summarization functionality.
